@@ -1,0 +1,2 @@
+<input id="colorSelect" [(ngModel)]="selectedColor" placeholder="Color Selected" (focus)="handleFocus()" (blur)="handleBlur()">
+<color-chrome [hidden]="!show" [color]="selectedColor" (onChangeComplete)="handleChangeComplete($event)"></color-chrome>

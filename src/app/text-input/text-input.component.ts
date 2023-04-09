@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-text-input',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-input.component.css']
 })
 export class TextInputComponent {
-
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  }
 }
