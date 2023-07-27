@@ -1,0 +1,6 @@
+<h1>Preguntas sobre un tema</h1>
+<input type="text" placeholder="Ingresa el tema" (input)="onTopicChange($event)" />
+<button (click)="onSubmit()">Obtener preguntas</button>
+<ul>
+  <li *ngFor="let question of questions">{{ question }}</li>
+</ul>
