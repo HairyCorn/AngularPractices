@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "pregunta": "Cuanto fue el año 1 mas 1",
+    "respuestas": ["Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4"],
+    "grupo": "Aficiones",
+    "tema": "Preguntas generales"
+  },
+  {
+    "id": 2,
+    "pregunta": "De que esta compuesto una bomba atomica",
+    "respuestas": ["Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4"],
+    "grupo": "Oppenhaimer",
+    "tema": "Preguntas de caracter general"
+  },
+  {
+    "id": 3,
+    "pregunta": "Las mujeres merecen derechos",
+    "respuestas": ["Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4"],
+    "grupo": "Mujeres",
+    "tema": "Preguntas faciles"
+  },
+  {
+    "id": 4,
+    "pregunta": "Merecen los otakus derechos",
+    "respuestas": ["Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4"],
+    "grupo": "Aficiones",
+    "tema": "Preguntas faciles"
+  }
+]

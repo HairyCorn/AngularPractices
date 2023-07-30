@@ -1,6 +1,26 @@
-<h1>Preguntas sobre un tema</h1>
-<input type="text" placeholder="Ingresa el tema" (input)="onTopicChange($event)" />
-<button (click)="onSubmit()">Obtener preguntas</button>
-<ul>
-  <li *ngFor="let question of questions">{{ question }}</li>
-</ul>
+<ng-container *ngIf="jsonData as pregunta">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ pregunta.pregunta }}?</mat-card-title>
+      <mat-card-subtitle>{{ pregunta.grupo }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="respuestas">
+        <mat-checkbox
+          (change)="onCheckboxChange()"
+          *ngFor="let respuesta of pregunta.respuestas"
+          class="example-margin"
+          disabled="{{ disableCheck }}"
+        >
+          {{ respuesta }}
+          <mat-icon class="mat-icon-clear">clear</mat-icon>
+        </mat-checkbox>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button disabled="{{ buttonEnable() }}">ANTERIOR</button>
+      <button mat-button>SIGUIENTE</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

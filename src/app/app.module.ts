@@ -10,14 +10,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { ContenedorComponent } from './contenedor/contenedor.component';
-import { ChatGptService } from './chat-gpt-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RespuestasComponent } from './respuestas/respuestas.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreguntasComponent,
-    ContenedorComponent
+    ContenedorComponent,
+    RespuestasComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatCheckboxModule,
   ],
-  providers: [ChatGptService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
