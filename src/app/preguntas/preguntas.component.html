@@ -1,5 +1,5 @@
-<ng-container *ngIf="jsonData as pregunta">
-  <mat-card class="example-card">
+<ng-container *ngIf="jsonData">
+  <mat-card class="example-card" *ngIf="preguntaActual as pregunta">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ pregunta.pregunta }}?</mat-card-title>
@@ -14,13 +14,12 @@
           disabled="{{ disableCheck }}"
         >
           {{ respuesta }}
-          <mat-icon class="mat-icon-clear">clear</mat-icon>
         </mat-checkbox>
       </div>
     </mat-card-content>
     <mat-card-actions align="end">
       <button mat-button disabled="{{ buttonEnable() }}">ANTERIOR</button>
-      <button mat-button>SIGUIENTE</button>
+      <button mat-button (click)="renderPregunta()">SIGUIENTE</button>
     </mat-card-actions>
   </mat-card>
 </ng-container>
